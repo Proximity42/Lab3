@@ -31,9 +31,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Lab3Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Text(
-                        modifier = Modifier.padding(innerPadding),
-                        text="Определение сезона года")
+
                 }
             }
         }
@@ -44,6 +42,19 @@ class MainActivity : ComponentActivity() {
 fun Seasons(modifier: Modifier = Modifier) {
     var input = remember {mutableStateOf("")}
     var result = remember {mutableStateOf("")}
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text="Определение сезона года",
+            fontSize = 24.sp
+        )
+    }
 }
 
 

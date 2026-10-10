@@ -89,7 +89,14 @@ fun Seasons(modifier: Modifier = Modifier) {
             Text("Определить сезон")
         }
 
+        Spacer(modifier = Modifier.height(32.dp))
 
+        if (result.isNotEmpty()) {
+            Text(
+                text = result,
+                fontSize = 20.sp,
+            )
+        }
     }
 }
 

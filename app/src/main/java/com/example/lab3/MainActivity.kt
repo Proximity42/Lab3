@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Lab3Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
+                    Seasons(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -73,13 +73,15 @@ fun Seasons(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
+
     }
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     Lab3Theme {
+        Seasons()
     }
 }
